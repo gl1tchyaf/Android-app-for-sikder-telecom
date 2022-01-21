@@ -24,37 +24,36 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <ImageView
-            android:id="@+id/back"
+        <Button
+            android:id="@+id/home"
             android:layout_width="wrap_content"
-            android:layout_height="36dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/back"
-            android:text="BACK" />
+            android:text="Home" />
 
-        <ImageView
-            android:id="@+id/reload"
+        <Button
+            android:id="@+id/Contact"
             android:layout_width="wrap_content"
-            android:layout_height="37dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/reload"
-            android:text="RELOAD2" />
+            android:text="Contact" />
 
-        <ImageView
-            android:id="@+id/forward"
+        <Button
+            android:id="@+id/Shop"
             android:layout_width="wrap_content"
-            android:layout_height="37dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/forward"
-            android:text="FORWARD" />
+            android:text="Shop" />
 
-        <ImageView
-            android:id="@+id/open"
+        <Button
+            android:id="@+id/Login"
             android:layout_width="wrap_content"
-            android:layout_height="37dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/browser"
-            android:text="Open in browser" />
+            android:text="Account" />
+
+
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

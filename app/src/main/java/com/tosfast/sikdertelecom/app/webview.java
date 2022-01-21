@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,14 +28,11 @@ public class webview extends AppCompatActivity {
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 
-        ImageView back=findViewById(R.id.back);
-        back.setOnClickListener(v -> onBackPressed());
-        ImageView forward= findViewById(R.id.forward);
-        forward.setOnClickListener(v -> forward());
-        ImageView reload= findViewById(R.id.reload);
-        reload.setOnClickListener(v -> reload());
-        ImageView openInBrowser = findViewById(R.id.open);
-        openInBrowser.setOnClickListener(v -> openInBrowser());
+        Button home = findViewById(R.id.home);
+        Button contact = findViewById(R.id.Contact);
+        Button shop = findViewById(R.id.Shop);
+        Button login = findViewById(R.id.Login);
+
 
     }
 
@@ -48,19 +46,6 @@ public class webview extends AppCompatActivity {
             super.onBackPressed();
         }
 
-    }
-
-    public void forward(){
-        if(webView.canGoForward()){
-            webView.goForward();
-        }
-    }
-    public void reload(){
-        webView.reload();
-    }
-    public void openInBrowser(){
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://sikdertelecom.com/"));
-        startActivity(intent);
     }
 
 }
