@@ -45,12 +45,18 @@
             android:layout_weight="1"
             android:text="Shop" />
 
-        <Button
-            android:id="@+id/Login"
+
+        <ImageButton
+            android:id="@+id/menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Account" />
+            android:layout_gravity="right"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="5dp"
+            android:background="#CACFD2"
+            android:src="@drawable/ic_menu"
+            android:text="Button"
+            />
 
 
 
