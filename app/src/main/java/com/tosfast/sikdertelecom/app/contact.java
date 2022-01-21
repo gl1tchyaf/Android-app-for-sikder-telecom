@@ -42,6 +42,10 @@ public class contact extends AppCompatActivity implements PopupMenu.OnMenuItemCl
         ImageButton b=findViewById(R.id.menu);
         b.setOnClickListener(this::showPopup);
 
+        home.setOnClickListener(v -> home());
+
+
+
 
     }
 
@@ -97,6 +101,12 @@ public class contact extends AppCompatActivity implements PopupMenu.OnMenuItemCl
         goback.setOnClickListener(v -> myDialog.cancel());
 
     }
+
+    void home(){
+        Intent intent = new Intent(this, webview.class);
+        startActivity(intent);
+    }
+
 
     @Override
     public void onBackPressed() {
