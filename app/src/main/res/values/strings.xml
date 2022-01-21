@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Sikder Telecom</string>
+    <string name="title_activity_rv">RVActivity</string>
+    <string name="facebook_app_id">4523385397726528</string>
+    <string name="fb_login_protocol_scheme">fb4523385397726528</string>
+
+</resources>
