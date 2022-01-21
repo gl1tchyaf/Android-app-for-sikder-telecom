@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/E:/Android/plugins/android/lib/android.jar!/images/material/icons/materialicons/account_box/baseline_account_box_24.xml" />
+                                      <entry key="url" value="file:/E:/sdk/icons/material/materialicons/menu/baseline_menu_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -28,7 +28,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_icon_account" />
+                            <entry key="outputName" value="ic_menu" />
                             <entry key="sourceFile" value="C:\Users\fahad\AndroidStudioProjects\SikderTelecom" />
                           </map>
                         </option>
