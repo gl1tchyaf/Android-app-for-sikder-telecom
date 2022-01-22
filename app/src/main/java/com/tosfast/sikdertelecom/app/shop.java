@@ -62,15 +62,18 @@ public class shop extends AppCompatActivity implements PopupMenu.OnMenuItemClick
     @Override
     public boolean onMenuItemClick(MenuItem item) {
         if(item.getItemId()==R.id.login){
-            System.out.println("Login");
+            Intent i = new Intent(this, Login.class);
+            startActivity(i);
             return true;
         }
         if(item.getItemId()==R.id.register){
-            System.out.println("Register");
+            Intent i = new Intent(this, register.class);
+            startActivity(i);
             return true;
         }
         if(item.getItemId()==R.id.wholesaller){
-            System.out.println("wholesaller");
+            Intent i = new Intent(this, wholesaller.class);
+            startActivity(i);
             return true;
         }
         if(item.getItemId()==R.id.about){
@@ -96,7 +99,7 @@ public class shop extends AppCompatActivity implements PopupMenu.OnMenuItemClick
         Button exitt= contentpopupview.findViewById(R.id.eixtreally);
         Button goback= contentpopupview.findViewById(R.id.goback);
         exitt.setOnClickListener(v -> {
-            finish();
+            finishAffinity();
             System.exit(0);
         });
         goback.setOnClickListener(v -> myDialog.cancel());

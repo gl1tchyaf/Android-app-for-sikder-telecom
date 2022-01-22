@@ -17,7 +17,7 @@ import android.widget.PopupMenu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class webview extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
+public class Login extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
     private WebView webView;
     private AlertDialog.Builder dialogeBuilder;
     private AlertDialog myDialog;
@@ -26,11 +26,11 @@ public class webview extends AppCompatActivity implements PopupMenu.OnMenuItemCl
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_webview);
+        setContentView(R.layout.activity_login);
 
         webView= findViewById(R.id.webview);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("https://sikdertelecom.com/");
+        webView.loadUrl("https://sikdertelecom.com/login");
 
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
@@ -44,6 +44,7 @@ public class webview extends AppCompatActivity implements PopupMenu.OnMenuItemCl
 
         contact.setOnClickListener(v -> contact());
         shop.setOnClickListener(v -> shop());
+        home.setOnClickListener(v -> home());
 
     }
 
@@ -110,6 +111,11 @@ public class webview extends AppCompatActivity implements PopupMenu.OnMenuItemCl
 
     void shop(){
         Intent intent= new Intent(this, shop.class);
+        startActivity(intent);
+    }
+
+    void home(){
+        Intent intent = new Intent(this, webview.class);
         startActivity(intent);
     }
 
