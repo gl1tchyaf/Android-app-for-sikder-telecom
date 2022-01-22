@@ -130,13 +130,13 @@ public class webview extends AppCompatActivity implements PopupMenu.OnMenuItemCl
         myDialog3= dialogeBuilder.create();
         myDialog3.show();
         Button ok= contentpopupview.findViewById(R.id.okabout);
-        TextView techrz= contentpopupview.findViewById(R.id.tosfast);
+        TextView tosfast= contentpopupview.findViewById(R.id.tosfast);
 
         TextView textView = contentpopupview.findViewById(R.id.about);
-        SpannableString content = new SpannableString("Team Techrz");
+        SpannableString content = new SpannableString("Tosfast ltd");
         content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
         textView.setText(content);
-        techrz.setOnClickListener(v -> {
+        tosfast.setOnClickListener(v -> {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/fantosfast"));
             startActivity(intent);
         });
