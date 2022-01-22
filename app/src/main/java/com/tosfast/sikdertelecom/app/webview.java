@@ -125,7 +125,8 @@ public class webview extends AppCompatActivity implements PopupMenu.OnMenuItemCl
             webView.goBack();
         }
         else{
-            super.onBackPressed();
+            exit();
+            //super.onBackPressed();
         }
 
     }
