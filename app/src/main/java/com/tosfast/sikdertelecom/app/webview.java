@@ -44,6 +44,7 @@ public class webview extends AppCompatActivity implements PopupMenu.OnMenuItemCl
 
         contact.setOnClickListener(v -> contact());
         shop.setOnClickListener(v -> shop());
+        home.setOnClickListener(v -> home());
 
     }
 
@@ -110,6 +111,11 @@ public class webview extends AppCompatActivity implements PopupMenu.OnMenuItemCl
 
     void shop(){
         Intent intent= new Intent(this, shop.class);
+        startActivity(intent);
+    }
+
+    void home(){
+        Intent intent= new Intent(this, webview.class);
         startActivity(intent);
     }
 

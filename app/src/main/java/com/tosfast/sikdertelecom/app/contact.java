@@ -44,6 +44,7 @@ public class contact extends AppCompatActivity implements PopupMenu.OnMenuItemCl
 
         home.setOnClickListener(v -> home());
         shop.setOnClickListener(v -> shop());
+        contact.setOnClickListener(v -> contact());
 
     }
 
@@ -110,6 +111,11 @@ public class contact extends AppCompatActivity implements PopupMenu.OnMenuItemCl
 
     void shop(){
         Intent intent= new Intent(this, shop.class);
+        startActivity(intent);
+    }
+
+    void contact(){
+        Intent intent= new Intent(this, contact.class);
         startActivity(intent);
     }
 
