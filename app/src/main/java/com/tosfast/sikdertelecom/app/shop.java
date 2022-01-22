@@ -133,5 +133,10 @@ public class shop extends AppCompatActivity implements PopupMenu.OnMenuItemClick
         }
 
     }
+    @Override
+    public void onPause() {
+        super.onPause();
+        overridePendingTransition(0, 0);
+    }
 
 }

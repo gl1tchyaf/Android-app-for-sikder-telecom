@@ -129,5 +129,10 @@ public class Login extends AppCompatActivity implements PopupMenu.OnMenuItemClic
         }
 
     }
+    @Override
+    public void onPause() {
+        super.onPause();
+        overridePendingTransition(0, 0);
+    }
 
 }

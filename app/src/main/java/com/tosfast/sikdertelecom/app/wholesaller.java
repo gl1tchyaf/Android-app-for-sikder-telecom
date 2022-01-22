@@ -129,5 +129,10 @@ public class wholesaller extends AppCompatActivity implements PopupMenu.OnMenuIt
         }
 
     }
+    @Override
+    public void onPause() {
+        super.onPause();
+        overridePendingTransition(0, 0);
+    }
 
 }

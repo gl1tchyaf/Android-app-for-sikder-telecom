@@ -130,5 +130,10 @@ public class contact extends AppCompatActivity implements PopupMenu.OnMenuItemCl
         }
 
     }
+    @Override
+    public void onPause() {
+        super.onPause();
+        overridePendingTransition(0, 0);
+    }
 
 }
