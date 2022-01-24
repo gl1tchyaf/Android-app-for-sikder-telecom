@@ -16,13 +16,12 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class wholesaller extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
+public class cart extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
     private WebView webView;
     private AlertDialog.Builder dialogeBuilder;
     private AlertDialog myDialog;
@@ -32,16 +31,18 @@ public class wholesaller extends AppCompatActivity implements PopupMenu.OnMenuIt
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_wholesaller);
+        setContentView(R.layout.activity_contact);
 
         webView= findViewById(R.id.webview);
-        webView.setWebViewClient(new WebViewClient(){
+        webView.setWebViewClient(new WebViewClient()
+        {
             @Override
             public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error){
-                loadErrorPage(view);
+            loadErrorPage(view);
             }
         });
-        webView.loadUrl("https://sikdertelecom.com/wholesaler-registraion");
+
+        webView.loadUrl("https://sikdertelecom.com/cart");
 
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
@@ -53,9 +54,9 @@ public class wholesaller extends AppCompatActivity implements PopupMenu.OnMenuIt
         ImageButton b=findViewById(R.id.menu);
         b.setOnClickListener(this::showPopup);
 
-        contact.setOnClickListener(v -> contact());
-        shop.setOnClickListener(v -> shop());
         home.setOnClickListener(v -> home());
+        shop.setOnClickListener(v -> shop());
+        contact.setOnClickListener(v -> contact());
 
     }
 
@@ -70,21 +71,6 @@ public class wholesaller extends AppCompatActivity implements PopupMenu.OnMenuIt
 
     @Override
     public boolean onMenuItemClick(MenuItem item) {
-        if(item.getItemId()==R.id.login){
-            Intent i = new Intent(this, Login.class);
-            startActivity(i);
-            return true;
-        }
-        if(item.getItemId()==R.id.register){
-            Intent i = new Intent(this, register.class);
-            startActivity(i);
-            return true;
-        }
-        if(item.getItemId()==R.id.wholesaller){
-            Intent i = new Intent(this, wholesaller.class);
-            startActivity(i);
-            return true;
-        }
         if(item.getItemId()==R.id.about){
             aboutus();
             return true;
@@ -115,8 +101,8 @@ public class wholesaller extends AppCompatActivity implements PopupMenu.OnMenuIt
 
     }
 
-    void contact(){
-        Intent intent= new Intent(this, contact.class);
+    void home(){
+        Intent intent = new Intent(this, webview.class);
         startActivity(intent);
     }
 
@@ -125,8 +111,8 @@ public class wholesaller extends AppCompatActivity implements PopupMenu.OnMenuIt
         startActivity(intent);
     }
 
-    void home(){
-        Intent intent = new Intent(this, webview.class);
+    void contact(){
+        Intent intent= new Intent(this, cart.class);
         startActivity(intent);
     }
 
@@ -149,6 +135,7 @@ public class wholesaller extends AppCompatActivity implements PopupMenu.OnMenuIt
         });
         ok.setOnClickListener(v -> myDialog3.cancel());
     }
+
 
     @Override
     public void onBackPressed() {
