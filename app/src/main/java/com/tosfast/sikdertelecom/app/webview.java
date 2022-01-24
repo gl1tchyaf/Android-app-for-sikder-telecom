@@ -9,6 +9,8 @@ import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebResourceError;
+import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -17,6 +19,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -33,11 +36,17 @@ public class webview extends AppCompatActivity implements PopupMenu.OnMenuItemCl
         setContentView(R.layout.activity_webview);
 
         webView= findViewById(R.id.webview);
-        webView.setWebViewClient(new WebViewClient());
+        webView.setWebViewClient(new WebViewClient(){
+            @Override
+            public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error){
+                loadErrorPage(view);
+            }
+        });
         webView.loadUrl("https://sikdertelecom.com/");
 
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
+
 
         Button home = findViewById(R.id.home);
         Button contact = findViewById(R.id.Contact);
@@ -158,6 +167,21 @@ public class webview extends AppCompatActivity implements PopupMenu.OnMenuItemCl
     public void onPause() {
         super.onPause();
         overridePendingTransition(0, 0);
+    }
+
+
+
+
+    public void loadErrorPage(WebView webview){
+        if(webview!=null){
+
+            String htmlData ="<html><body>This is the error </body> </html>";
+
+            webview.loadUrl("about:blank");
+            webview.loadDataWithBaseURL(null,htmlData, "text/html", "UTF-8",null);
+            webview.invalidate();
+
+        }
     }
 
 }
