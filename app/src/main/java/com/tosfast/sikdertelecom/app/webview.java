@@ -42,7 +42,7 @@ public class webview extends AppCompatActivity implements PopupMenu.OnMenuItemCl
                 loadErrorPage(view);
             }
         });
-        webView.loadUrl("https://sikdertelecom.com/");
+        webView.loadUrl("http://sikdertelecom.com/");
 
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
@@ -174,13 +174,8 @@ public class webview extends AppCompatActivity implements PopupMenu.OnMenuItemCl
 
     public void loadErrorPage(WebView webview){
         if(webview!=null){
-
-            String htmlData ="<html><body>This is the error </body> </html>";
-
-            webview.loadUrl("about:blank");
-            webview.loadDataWithBaseURL(null,htmlData, "text/html", "UTF-8",null);
+            webview.loadUrl("file:///android_asset/error_show.html");
             webview.invalidate();
-
         }
     }
 
