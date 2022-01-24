@@ -169,9 +169,6 @@ public class webview extends AppCompatActivity implements PopupMenu.OnMenuItemCl
         overridePendingTransition(0, 0);
     }
 
-
-
-
     public void loadErrorPage(WebView webview){
         if(webview!=null){
             webview.loadUrl("file:///android_asset/error_show.html");

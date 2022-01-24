@@ -9,6 +9,8 @@ import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebResourceError;
+import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -33,7 +35,12 @@ public class shop extends AppCompatActivity implements PopupMenu.OnMenuItemClick
         setContentView(R.layout.activity_shop);
 
         webView= findViewById(R.id.webview);
-        webView.setWebViewClient(new WebViewClient());
+        webView.setWebViewClient(new WebViewClient(){
+            @Override
+            public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error){
+                loadErrorPage(view);
+            }
+        });
         webView.loadUrl("https://sikdertelecom.com/shop");
 
         WebSettings webSettings = webView.getSettings();
@@ -161,6 +168,13 @@ public class shop extends AppCompatActivity implements PopupMenu.OnMenuItemClick
     public void onPause() {
         super.onPause();
         overridePendingTransition(0, 0);
+    }
+
+    public void loadErrorPage(WebView webview){
+        if(webview!=null){
+            webview.loadUrl("file:///android_asset/error_show.html");
+            webview.invalidate();
+        }
     }
 
 }

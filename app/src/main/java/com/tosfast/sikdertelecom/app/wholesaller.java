@@ -9,6 +9,8 @@ import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebResourceError;
+import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -33,7 +35,12 @@ public class wholesaller extends AppCompatActivity implements PopupMenu.OnMenuIt
         setContentView(R.layout.activity_wholesaller);
 
         webView= findViewById(R.id.webview);
-        webView.setWebViewClient(new WebViewClient());
+        webView.setWebViewClient(new WebViewClient(){
+            @Override
+            public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error){
+                loadErrorPage(view);
+            }
+        });
         webView.loadUrl("https://sikdertelecom.com/wholesaler-registraion");
 
         WebSettings webSettings = webView.getSettings();
@@ -157,6 +164,13 @@ public class wholesaller extends AppCompatActivity implements PopupMenu.OnMenuIt
     public void onPause() {
         super.onPause();
         overridePendingTransition(0, 0);
+    }
+
+    public void loadErrorPage(WebView webview){
+        if(webview!=null){
+            webview.loadUrl("file:///android_asset/error_show.html");
+            webview.invalidate();
+        }
     }
 
 }
