@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:id="@+id/login"
-        android:icon="@drawable/ic_menu"
-        android:title="Login"
-        />
-    <item android:id="@+id/register"
-        android:title="Register"
-        />
-    <item android:id="@+id/wholesaller"
-        android:title="Register as Wholesaler"
-        />
     <item android:id="@+id/about"
         android:title="About Us"
         />

@@ -16,7 +16,6 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
@@ -73,21 +72,6 @@ public class shop extends AppCompatActivity implements PopupMenu.OnMenuItemClick
 
     @Override
     public boolean onMenuItemClick(MenuItem item) {
-        if(item.getItemId()==R.id.login){
-            Intent i = new Intent(this, Login.class);
-            startActivity(i);
-            return true;
-        }
-        if(item.getItemId()==R.id.register){
-            Intent i = new Intent(this, register.class);
-            startActivity(i);
-            return true;
-        }
-        if(item.getItemId()==R.id.wholesaller){
-            Intent i = new Intent(this, wholesaller.class);
-            startActivity(i);
-            return true;
-        }
         if(item.getItemId()==R.id.about){
             aboutus();
             return true;
@@ -124,7 +108,7 @@ public class shop extends AppCompatActivity implements PopupMenu.OnMenuItemClick
     }
 
     void contact(){
-        Intent intent = new Intent(this, contact.class);
+        Intent intent = new Intent(this, cart.class);
         startActivity(intent);
     }
 
