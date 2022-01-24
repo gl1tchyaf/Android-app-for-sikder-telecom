@@ -46,14 +46,14 @@ public class webview extends AppCompatActivity implements PopupMenu.OnMenuItemCl
         webSettings.setJavaScriptEnabled(true);
 
 
-        Button home = findViewById(R.id.home);
-        Button contact = findViewById(R.id.Contact);
-        Button shop = findViewById(R.id.Shop);
+        ImageButton home = findViewById(R.id.home);
+        ImageButton cart = findViewById(R.id.Contact);
+        ImageButton shop = findViewById(R.id.Shop);
 
         ImageButton b=findViewById(R.id.menu);
         b.setOnClickListener(this::showPopup);
 
-        contact.setOnClickListener(v -> contact());
+        cart.setOnClickListener(v -> contact());
         shop.setOnClickListener(v -> shop());
         home.setOnClickListener(v -> home());
 

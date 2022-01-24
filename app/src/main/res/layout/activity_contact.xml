@@ -25,37 +25,42 @@
         app:layout_constraintStart_toStartOf="parent"
         android:background="@color/white">
 
-        <Button
+        <ImageButton
             android:id="@+id/home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Home" />
+            android:background="@null"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/home" />
 
-        <Button
+        <ImageButton
             android:id="@+id/Contact"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Cart" />
+            android:background="@null"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/cart" />
 
-        <Button
+        <ImageButton
             android:id="@+id/Shop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Shop" />
+            android:background="@null"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/shop" />
 
 
         <ImageButton
             android:id="@+id/menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
             android:layout_gravity="center"
-            android:layout_marginRight="5dp"
-            android:background="#CACFD2"
-            android:src="@drawable/ic_menu"
-            android:text="Button" />
+            app:srcCompat="@drawable/option" />
 
 
     </LinearLayout>

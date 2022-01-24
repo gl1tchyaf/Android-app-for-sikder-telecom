@@ -47,16 +47,16 @@ public class cart extends AppCompatActivity implements PopupMenu.OnMenuItemClick
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 
-        Button home = findViewById(R.id.home);
-        Button contact = findViewById(R.id.Contact);
-        Button shop = findViewById(R.id.Shop);
+        ImageButton home = findViewById(R.id.home);
+        ImageButton cart = findViewById(R.id.Contact);
+        ImageButton shop = findViewById(R.id.Shop);
 
         ImageButton b=findViewById(R.id.menu);
         b.setOnClickListener(this::showPopup);
 
         home.setOnClickListener(v -> home());
         shop.setOnClickListener(v -> shop());
-        contact.setOnClickListener(v -> contact());
+        cart.setOnClickListener(v -> contact());
 
     }
 
