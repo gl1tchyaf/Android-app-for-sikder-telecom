@@ -42,7 +42,7 @@ public class webview extends AppCompatActivity implements PopupMenu.OnMenuItemCl
                 loadErrorPage(view);
             }
         });
-        webView.loadUrl("http://sikdertelecom.com/");
+        webView.loadUrl("https://sikdertelecom.com/");
 
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
