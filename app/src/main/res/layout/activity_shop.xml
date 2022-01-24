@@ -29,38 +29,46 @@
             android:id="@+id/home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_weight="1"
             android:background="@null"
-            android:layout_gravity="center"
-            app:srcCompat="@drawable/home" />
+            app:srcCompat="@drawable/home"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+            android:contentDescription="Home" />
 
         <ImageButton
             android:id="@+id/Contact"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_weight="1"
             android:background="@null"
-            android:layout_gravity="center"
-            app:srcCompat="@drawable/cart" />
+            app:srcCompat="@drawable/cart"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+            android:contentDescription="Cart" />
 
         <ImageButton
             android:id="@+id/Shop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_weight="1"
             android:background="@null"
-            android:layout_gravity="center"
-            app:srcCompat="@drawable/shop" />
+            app:srcCompat="@drawable/shop"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+            android:contentDescription="Shop" />
 
 
         <ImageButton
             android:id="@+id/menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_weight="1"
             android:background="@null"
-            android:layout_gravity="center"
-            app:srcCompat="@drawable/option" />
+            app:srcCompat="@drawable/option"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+            android:contentDescription="Menu" />
 
 
     </LinearLayout>
