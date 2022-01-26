@@ -22,6 +22,7 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -31,7 +32,7 @@ import androidx.navigation.ui.NavigationUI;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
-public class webview extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
+public class webview extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private WebView webView;
     private AlertDialog.Builder dialogeBuilder;
     private AlertDialog myDialog;
@@ -72,6 +73,8 @@ public class webview extends AppCompatActivity implements PopupMenu.OnMenuItemCl
 
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
 
 
         findViewById(R.id.menu).setOnClickListener(new View.OnClickListener() {
@@ -92,8 +95,9 @@ public class webview extends AppCompatActivity implements PopupMenu.OnMenuItemCl
 
     }
 
+    @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onMenuItemClick(MenuItem item) {
+    public boolean onNavigationItemSelected(MenuItem item) {
 
         if(item.getItemId()==R.id.about){
             aboutus();
@@ -103,9 +107,10 @@ public class webview extends AppCompatActivity implements PopupMenu.OnMenuItemCl
             exit();
             return true;
         }
-        else{
-            return false;
-        }
+
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
 
     }
 
@@ -190,7 +195,4 @@ public class webview extends AppCompatActivity implements PopupMenu.OnMenuItemCl
         getMenuInflater().inflate(R.menu.nav_draw, menu);
         return true;
     }
-
-
-
 }
