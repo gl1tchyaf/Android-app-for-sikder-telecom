@@ -18,7 +18,5 @@ public class MainActivity extends AppCompatActivity {
             startActivity(loginIntent);
             finish();
         },SPLASH_TIME_OUT);
-
-
     }
 }
