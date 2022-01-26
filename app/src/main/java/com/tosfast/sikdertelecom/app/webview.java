@@ -71,8 +71,6 @@ public class webview extends AppCompatActivity implements PopupMenu.OnMenuItemCl
 
 
 
-        setSupportActionBar(findViewById(R.id.toolbar));
-
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
 
 
