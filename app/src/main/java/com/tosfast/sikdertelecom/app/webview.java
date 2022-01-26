@@ -195,4 +195,5 @@ public class webview extends AppCompatActivity implements NavigationView.OnNavig
         getMenuInflater().inflate(R.menu.nav_draw, menu);
         return true;
     }
+
 }
