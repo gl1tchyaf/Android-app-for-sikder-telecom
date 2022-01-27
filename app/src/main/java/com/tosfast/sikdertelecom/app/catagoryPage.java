@@ -82,7 +82,7 @@ public class catagoryPage extends AppCompatActivity implements NavigationView.On
         findViewById(R.id.menu).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                drawer.openDrawer(Gravity.LEFT);
+                drawer.openDrawer(Gravity.RIGHT);
             }
         });
 

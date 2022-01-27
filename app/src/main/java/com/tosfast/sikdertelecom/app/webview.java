@@ -83,7 +83,7 @@ public class webview extends AppCompatActivity implements NavigationView.OnNavig
         findViewById(R.id.menu).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                drawer.openDrawer(Gravity.LEFT);
+                drawer.openDrawer(Gravity.RIGHT);
             }
         });
 

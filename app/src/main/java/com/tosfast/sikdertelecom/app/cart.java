@@ -71,7 +71,7 @@ public class cart extends AppCompatActivity implements NavigationView.OnNavigati
         findViewById(R.id.menu).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                drawer.openDrawer(Gravity.LEFT);
+                drawer.openDrawer(Gravity.RIGHT);
             }
         });
 
