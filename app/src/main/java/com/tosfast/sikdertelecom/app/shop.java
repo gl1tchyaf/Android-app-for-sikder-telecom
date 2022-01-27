@@ -47,7 +47,7 @@ public class shop extends AppCompatActivity implements NavigationView.OnNavigati
             }
         });
 
-        webView.loadUrl("https://sikdertelecom.com/cart");
+        webView.loadUrl("https://sikdertelecom.com/shop");
 
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
