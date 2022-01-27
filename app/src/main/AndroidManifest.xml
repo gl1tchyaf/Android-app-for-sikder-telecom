@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".catagoryPage"
+            android:exported="true" />
+        <activity
             android:name=".shop"
             android:exported="true" />
         <activity
