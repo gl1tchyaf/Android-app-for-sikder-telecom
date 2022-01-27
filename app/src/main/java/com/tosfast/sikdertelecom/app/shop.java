@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebResourceError;
@@ -20,8 +21,12 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
-public class shop extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
+import com.google.android.material.navigation.NavigationView;
+
+public class shop extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private WebView webView;
     private AlertDialog.Builder dialogeBuilder;
     private AlertDialog myDialog;
@@ -34,13 +39,15 @@ public class shop extends AppCompatActivity implements PopupMenu.OnMenuItemClick
         setContentView(R.layout.activity_shop);
 
         webView= findViewById(R.id.webview);
-        webView.setWebViewClient(new WebViewClient(){
+        webView.setWebViewClient(new WebViewClient()
+        {
             @Override
             public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error){
                 loadErrorPage(view);
             }
         });
-        webView.loadUrl("https://sikdertelecom.com/shop");
+
+        webView.loadUrl("https://sikdertelecom.com/cart");
 
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
@@ -49,15 +56,24 @@ public class shop extends AppCompatActivity implements PopupMenu.OnMenuItemClick
         ImageButton cart = findViewById(R.id.Contact);
         ImageButton shop = findViewById(R.id.Shop);
 
-        ImageButton b=findViewById(R.id.menu);
-        b.setOnClickListener(this::showPopup);
+        //ImageButton b=findViewById(R.id.menu);
+        //b.setOnClickListener(this::showPopup);
 
         home.setOnClickListener(v -> home());
-        cart.setOnClickListener(v -> contact());
         shop.setOnClickListener(v -> shop());
+        cart.setOnClickListener(v -> contact());
+
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
 
 
-
+        findViewById(R.id.menu).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drawer.openDrawer(Gravity.LEFT);
+            }
+        });
 
     }
 
@@ -70,8 +86,41 @@ public class shop extends AppCompatActivity implements PopupMenu.OnMenuItemClick
 
     }
 
+    @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onMenuItemClick(MenuItem item) {
+    public boolean onNavigationItemSelected(MenuItem item) {
+
+        if(item.getItemId()==R.id.mobile){
+            webview wb = new webview();
+            wb.catagoryLink = "https://sikdertelecom.com/category/Mobile";
+            catagory();
+            return true;
+        }
+        if(item.getItemId()==R.id.charger){
+            webview wb = new webview();
+            wb.catagoryLink = "https://sikdertelecom.com/category/Charger";
+            catagory();
+            return true;
+        }
+        if(item.getItemId()==R.id.headphone){
+            webview wb = new webview();
+            wb.catagoryLink = "https://sikdertelecom.com/category/Head+Phone";
+            catagory();
+            return true;
+        }
+        if(item.getItemId()==R.id.router){
+            webview wb = new webview();
+            wb.catagoryLink = "https://sikdertelecom.com/category/Router";
+            catagory();
+            return true;
+        }
+        if(item.getItemId()==R.id.xbox){
+            webview wb = new webview();
+            wb.catagoryLink = "https://sikdertelecom.com/category/xbox";
+            catagory();
+            return true;
+        }
+
         if(item.getItemId()==R.id.about){
             aboutus();
             return true;
@@ -80,10 +129,16 @@ public class shop extends AppCompatActivity implements PopupMenu.OnMenuItemClick
             exit();
             return true;
         }
-        else{
-            return false;
-        }
 
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+
+    }
+
+    void catagory(){
+        Intent i = new Intent(this, catagoryPage.class);
+        startActivity(i);
     }
 
     void exit(){
@@ -107,13 +162,13 @@ public class shop extends AppCompatActivity implements PopupMenu.OnMenuItemClick
         startActivity(intent);
     }
 
-    void contact(){
-        Intent intent = new Intent(this, cart.class);
+    void shop(){
+        Intent intent= new Intent(this, shop.class);
         startActivity(intent);
     }
 
-    void shop(){
-        Intent intent= new Intent(this, shop.class);
+    void contact(){
+        Intent intent= new Intent(this, cart.class);
         startActivity(intent);
     }
 

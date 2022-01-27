@@ -6,16 +6,6 @@
     android:layout_height="wrap_content"
     android:layout_gravity="center">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:fontFamily="@font/timesnewnormalregular"
-        android:id="@+id/about"
-        android:textColor="@color/black"
-        android:text="Tosfast IT"
-        android:textSize="20dp" />
-
 
     <LinearLayout
         android:layout_width="wrap_content"
