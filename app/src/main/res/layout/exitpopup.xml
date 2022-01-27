@@ -13,8 +13,9 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textSize="17dp"
-        android:fontFamily="@font/timesnewnormalregular"
-        android:text="Do really you want to exit?"
+        android:fontFamily="@font/roboto"
+        android:text="Do you really want to exit?"
+        android:textColor="#192841"
         android:gravity="center_horizontal" />
 
     <LinearLayout
@@ -33,8 +34,8 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/custombutton"
-            android:fontFamily="@font/timesnewnormalregular"
-            android:textColor="#FA71CD"
+            android:fontFamily="@font/roboto"
+            android:textColor="#192841"
             android:textSize="20sp"
             android:textAllCaps="false"/>
 
@@ -47,8 +48,8 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/custombutton"
-            android:fontFamily="@font/timesnewnormalregular"
-            android:textColor="#FA71CD"
+            android:fontFamily="@font/roboto"
+            android:textColor="#192841"
             android:textSize="20sp"
             android:textAllCaps="false"/>
     </LinearLayout>
