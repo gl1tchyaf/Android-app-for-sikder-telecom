@@ -127,10 +127,6 @@ public class webview extends AppCompatActivity implements NavigationView.OnNavig
             return true;
         }
 
-        if(item.getItemId()==R.id.about){
-            aboutus();
-            return true;
-        }
         if(item.getItemId()==R.id.exit){
             exit();
             return true;
@@ -176,26 +172,6 @@ public class webview extends AppCompatActivity implements NavigationView.OnNavig
     void home(){
         Intent intent= new Intent(this, webview.class);
         startActivity(intent);
-    }
-
-    void aboutus(){
-        dialogeBuilder = new AlertDialog.Builder(this);
-        final View contentpopupview = getLayoutInflater().inflate(R.layout.aboutus,null);
-        dialogeBuilder.setView(contentpopupview);
-        myDialog3= dialogeBuilder.create();
-        myDialog3.show();
-        Button ok= contentpopupview.findViewById(R.id.okabout);
-        TextView tosfast= contentpopupview.findViewById(R.id.tosfast);
-
-        TextView textView = contentpopupview.findViewById(R.id.about);
-        SpannableString content = new SpannableString("Tosfast ltd");
-        content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
-        textView.setText(content);
-        tosfast.setOnClickListener(v -> {
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/fantosfast"));
-            startActivity(intent);
-        });
-        ok.setOnClickListener(v -> myDialog3.cancel());
     }
 
     @Override

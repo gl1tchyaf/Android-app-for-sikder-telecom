@@ -21,9 +21,6 @@
                 />
         </menu>
     </item>
-    <item android:id="@+id/about"
-        android:title="About Us"
-        />
     <item android:id="@+id/exit"
         android:title="Exit"
         />
