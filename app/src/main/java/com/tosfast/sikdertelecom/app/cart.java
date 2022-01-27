@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebResourceError;
@@ -20,8 +21,12 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
-public class cart extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
+import com.google.android.material.navigation.NavigationView;
+
+public class cart extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private WebView webView;
     private AlertDialog.Builder dialogeBuilder;
     private AlertDialog myDialog;
@@ -51,12 +56,24 @@ public class cart extends AppCompatActivity implements PopupMenu.OnMenuItemClick
         ImageButton cart = findViewById(R.id.Contact);
         ImageButton shop = findViewById(R.id.Shop);
 
-        ImageButton b=findViewById(R.id.menu);
-        b.setOnClickListener(this::showPopup);
+        //ImageButton b=findViewById(R.id.menu);
+        //b.setOnClickListener(this::showPopup);
 
         home.setOnClickListener(v -> home());
         shop.setOnClickListener(v -> shop());
         cart.setOnClickListener(v -> contact());
+
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+
+        findViewById(R.id.menu).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drawer.openDrawer(Gravity.LEFT);
+            }
+        });
 
     }
 
@@ -69,20 +86,55 @@ public class cart extends AppCompatActivity implements PopupMenu.OnMenuItemClick
 
     }
 
+    @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onMenuItemClick(MenuItem item) {
-        if(item.getItemId()==R.id.about){
-            aboutus();
+    public boolean onNavigationItemSelected(MenuItem item) {
+
+        if(item.getItemId()==R.id.mobile){
+            webview wb = new webview();
+            wb.catagoryLink = "https://sikdertelecom.com/category/Mobile";
+            catagory();
             return true;
         }
+        if(item.getItemId()==R.id.charger){
+            webview wb = new webview();
+            wb.catagoryLink = "https://sikdertelecom.com/category/Charger";
+            catagory();
+            return true;
+        }
+        if(item.getItemId()==R.id.headphone){
+            webview wb = new webview();
+            wb.catagoryLink = "https://sikdertelecom.com/category/Head+Phone";
+            catagory();
+            return true;
+        }
+        if(item.getItemId()==R.id.router){
+            webview wb = new webview();
+            wb.catagoryLink = "https://sikdertelecom.com/category/Router";
+            catagory();
+            return true;
+        }
+        if(item.getItemId()==R.id.xbox){
+            webview wb = new webview();
+            wb.catagoryLink = "https://sikdertelecom.com/category/xbox";
+            catagory();
+            return true;
+        }
+
         if(item.getItemId()==R.id.exit){
             exit();
             return true;
         }
-        else{
-            return false;
-        }
 
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+
+    }
+
+    void catagory(){
+        Intent i = new Intent(this, catagoryPage.class);
+        startActivity(i);
     }
 
     void exit(){
@@ -116,25 +168,6 @@ public class cart extends AppCompatActivity implements PopupMenu.OnMenuItemClick
         startActivity(intent);
     }
 
-    void aboutus(){
-        dialogeBuilder = new AlertDialog.Builder(this);
-        final View contentpopupview = getLayoutInflater().inflate(R.layout.aboutus,null);
-        dialogeBuilder.setView(contentpopupview);
-        myDialog3= dialogeBuilder.create();
-        myDialog3.show();
-        Button ok= contentpopupview.findViewById(R.id.okabout);
-        TextView tosfast= contentpopupview.findViewById(R.id.tosfast);
-
-        TextView textView = contentpopupview.findViewById(R.id.about);
-        SpannableString content = new SpannableString("Tosfast ltd");
-        content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
-        textView.setText(content);
-        tosfast.setOnClickListener(v -> {
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/fantosfast"));
-            startActivity(intent);
-        });
-        ok.setOnClickListener(v -> myDialog3.cancel());
-    }
 
 
     @Override

@@ -10,7 +10,6 @@ import android.text.style.UnderlineSpan;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.SubMenu;
 import android.view.View;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
@@ -30,16 +29,14 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
-public class webview extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class catagoryPage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private WebView webView;
     private AlertDialog.Builder dialogeBuilder;
     private AlertDialog myDialog;
     private AlertDialog myDialog3;
-    public static String catagoryLink = "link";
 
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -47,7 +44,7 @@ public class webview extends AppCompatActivity implements NavigationView.OnNavig
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_webview);
+        setContentView(R.layout.activity_catagory_page);
 
         webView= findViewById(R.id.webview);
         webView.setWebViewClient(new WebViewClient(){
@@ -56,7 +53,9 @@ public class webview extends AppCompatActivity implements NavigationView.OnNavig
                 loadErrorPage(view);
             }
         });
-        webView.loadUrl("https://sikdertelecom.com/");
+
+        webview wb = new webview();
+        webView.loadUrl(wb.catagoryLink);
 
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
@@ -98,31 +97,37 @@ public class webview extends AppCompatActivity implements NavigationView.OnNavig
 
     }
 
+    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
 
         if(item.getItemId()==R.id.mobile){
-            catagoryLink = "https://sikdertelecom.com/category/Mobile";
+            webview wb = new webview();
+            wb.catagoryLink = "https://sikdertelecom.com/category/Mobile";
             catagory();
             return true;
         }
         if(item.getItemId()==R.id.charger){
-            catagoryLink = "https://sikdertelecom.com/category/Charger";
+            webview wb = new webview();
+            wb.catagoryLink = "https://sikdertelecom.com/category/Charger";
             catagory();
             return true;
         }
         if(item.getItemId()==R.id.headphone){
-            catagoryLink = "https://sikdertelecom.com/category/Head+Phone";
+            webview wb = new webview();
+            wb.catagoryLink = "https://sikdertelecom.com/category/Head+Phone";
             catagory();
             return true;
         }
         if(item.getItemId()==R.id.router){
-            catagoryLink = "https://sikdertelecom.com/category/Router";
+            webview wb = new webview();
+            wb.catagoryLink = "https://sikdertelecom.com/category/Router";
             catagory();
             return true;
         }
         if(item.getItemId()==R.id.xbox){
-            catagoryLink = "https://sikdertelecom.com/category/xbox";
+            webview wb = new webview();
+            wb.catagoryLink = "https://sikdertelecom.com/category/xbox";
             catagory();
             return true;
         }
@@ -173,6 +178,7 @@ public class webview extends AppCompatActivity implements NavigationView.OnNavig
         Intent intent= new Intent(this, webview.class);
         startActivity(intent);
     }
+
 
     @Override
     public void onBackPressed() {
