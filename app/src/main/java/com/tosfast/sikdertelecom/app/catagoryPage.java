@@ -101,36 +101,7 @@ public class catagoryPage extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
 
-        if(item.getItemId()==R.id.mobile){
-            webview wb = new webview();
-            wb.catagoryLink = "https://sikdertelecom.com/category/Mobile";
-            catagory();
-            return true;
-        }
-        if(item.getItemId()==R.id.charger){
-            webview wb = new webview();
-            wb.catagoryLink = "https://sikdertelecom.com/category/Charger";
-            catagory();
-            return true;
-        }
-        if(item.getItemId()==R.id.headphone){
-            webview wb = new webview();
-            wb.catagoryLink = "https://sikdertelecom.com/category/Head+Phone";
-            catagory();
-            return true;
-        }
-        if(item.getItemId()==R.id.router){
-            webview wb = new webview();
-            wb.catagoryLink = "https://sikdertelecom.com/category/Router";
-            catagory();
-            return true;
-        }
-        if(item.getItemId()==R.id.xbox){
-            webview wb = new webview();
-            wb.catagoryLink = "https://sikdertelecom.com/category/xbox";
-            catagory();
-            return true;
-        }
+
 
         if(item.getItemId()==R.id.exit){
             exit();

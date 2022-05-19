@@ -31,7 +31,23 @@
             android:layout_gravity="right"
             android:fitsSystemWindows="true"
             app:headerLayout="@layout/nav_header_nav_draw"
-            app:menu="@menu/dropdown_menu" />
+            app:menu="@menu/dropdown_menu" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include layout="@layout/nav_header_nav_draw" />
+
+                <ListView
+                    android:id="@+id/list_slidermenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    />
+
+            </LinearLayout>
+        </com.google.android.material.navigation.NavigationView>
     </androidx.drawerlayout.widget.DrawerLayout>
 
     <LinearLayout

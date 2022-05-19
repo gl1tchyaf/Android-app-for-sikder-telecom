@@ -20,6 +20,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
@@ -51,6 +52,8 @@ public class webview extends AppCompatActivity implements NavigationView.OnNavig
     private AlertDialog myDialog3;
     public static String catagoryLink = "link";
     ArrayList<catagoryArrayList> arrayList;
+    catagoryAdapter catagoryAdapter;
+    private ListView catagoryListView;
 
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -90,6 +93,7 @@ public class webview extends AppCompatActivity implements NavigationView.OnNavig
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        catagoryListView = findViewById(R.id.list_slidermenu);
 
 
         findViewById(R.id.menu).setOnClickListener(new View.OnClickListener() {
@@ -129,6 +133,7 @@ public class webview extends AppCompatActivity implements NavigationView.OnNavig
                         arrayList.add(catagoryArrayList);
                         System.out.println(catagoryArrayList.getName());
                         System.out.println(catagoryArrayList.getLink());
+                        loadDatainList();
 
                     }
                 } catch (Exception e) {
@@ -165,32 +170,6 @@ public class webview extends AppCompatActivity implements NavigationView.OnNavig
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
 
-        if(item.getItemId()==R.id.mobile){
-            catagoryLink = "https://sikdertelecom.com/category/Mobile";
-            catagory();
-            return true;
-        }
-        if(item.getItemId()==R.id.charger){
-            catagoryLink = "https://sikdertelecom.com/category/Charger";
-            catagory();
-            return true;
-        }
-        if(item.getItemId()==R.id.headphone){
-            catagoryLink = "https://sikdertelecom.com/category/Head+Phone";
-            catagory();
-            return true;
-        }
-        if(item.getItemId()==R.id.router){
-            catagoryLink = "https://sikdertelecom.com/category/Router";
-            catagory();
-            return true;
-        }
-        if(item.getItemId()==R.id.xbox){
-            catagoryLink = "https://sikdertelecom.com/category/xbox";
-            catagory();
-            return true;
-        }
-
         if(item.getItemId()==R.id.exit){
             exit();
             return true;
@@ -205,6 +184,12 @@ public class webview extends AppCompatActivity implements NavigationView.OnNavig
     void catagory(){
         Intent i = new Intent(this, catagoryPage.class);
         startActivity(i);
+    }
+
+    public void loadDatainList(){
+        catagoryAdapter = new catagoryAdapter(this,arrayList);
+        catagoryListView.setAdapter(catagoryAdapter);
+        catagoryAdapter.notifyDataSetChanged();
     }
 
     void exit(){

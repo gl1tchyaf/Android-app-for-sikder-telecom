@@ -22,6 +22,7 @@
         <entry key="..\:/Users/fahad/AndroidStudioProjects/SikderTelecom/app/src/main/res/drawable-v24/custombutton.xml" value="0.21875" />
         <entry key="..\:/Users/fahad/AndroidStudioProjects/SikderTelecom/app/src/main/res/drawable-v24/ic_menu.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/fahad/AndroidStudioProjects/SikderTelecom/app/src/main/res/drawable/ic_menu.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/fahad/AndroidStudioProjects/SikderTelecom/app/src/main/res/drawable/nav_view_custom.xml" value="0.17" />
         <entry key="..\:/Users/fahad/AndroidStudioProjects/SikderTelecom/app/src/main/res/layout/aboutus.xml" value="0.3625" />
         <entry key="..\:/Users/fahad/AndroidStudioProjects/SikderTelecom/app/src/main/res/layout/activity_catagory_page.xml" value="0.5" />
         <entry key="..\:/Users/fahad/AndroidStudioProjects/SikderTelecom/app/src/main/res/layout/activity_contact.xml" value="0.3484375" />
@@ -29,10 +30,12 @@
         <entry key="..\:/Users/fahad/AndroidStudioProjects/SikderTelecom/app/src/main/res/layout/activity_main.xml" value="0.3625" />
         <entry key="..\:/Users/fahad/AndroidStudioProjects/SikderTelecom/app/src/main/res/layout/activity_register.xml" value="0.3625" />
         <entry key="..\:/Users/fahad/AndroidStudioProjects/SikderTelecom/app/src/main/res/layout/activity_shop.xml" value="0.5" />
-        <entry key="..\:/Users/fahad/AndroidStudioProjects/SikderTelecom/app/src/main/res/layout/activity_webview.xml" value="0.4341517857142857" />
+        <entry key="..\:/Users/fahad/AndroidStudioProjects/SikderTelecom/app/src/main/res/layout/activity_webview.xml" value="0.3709483793517407" />
         <entry key="..\:/Users/fahad/AndroidStudioProjects/SikderTelecom/app/src/main/res/layout/activity_wholesaller.xml" value="0.3625" />
+        <entry key="..\:/Users/fahad/AndroidStudioProjects/SikderTelecom/app/src/main/res/layout/biddingcustomview.xml" value="0.1859375" />
         <entry key="..\:/Users/fahad/AndroidStudioProjects/SikderTelecom/app/src/main/res/layout/exitpopup.xml" value="0.5" />
         <entry key="..\:/Users/fahad/AndroidStudioProjects/SikderTelecom/app/src/main/res/layout/nav_header_nav_draw.xml" value="0.1609375" />
+        <entry key="..\:/Users/fahad/AndroidStudioProjects/SikderTelecom/app/src/main/res/layout/nav_view_layout.xml" value="0.146875" />
         <entry key="..\:/Users/fahad/AndroidStudioProjects/SikderTelecom/app/src/main/res/layout/simple_spinner_item.xml" value="0.3625" />
         <entry key="..\:/Users/fahad/AndroidStudioProjects/SikderTelecom/app/src/main/res/menu/dropdown_menu.xml" value="0.3625" />
         <entry key="..\:/Users/fahad/AndroidStudioProjects/SikderTelecom/app/src/main/res/menu/nav_draw.xml" value="0.1609375" />
