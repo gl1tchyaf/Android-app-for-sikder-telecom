@@ -54,6 +54,7 @@ public class webview extends AppCompatActivity implements NavigationView.OnNavig
     ArrayList<catagoryArrayList> arrayList;
     catagoryAdapter catagoryAdapter;
     private ListView catagoryListView;
+    TextView exit;
 
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -80,6 +81,7 @@ public class webview extends AppCompatActivity implements NavigationView.OnNavig
         ImageButton home = findViewById(R.id.home);
         ImageButton cart = findViewById(R.id.Contact);
         ImageButton shop = findViewById(R.id.Shop);
+        exit = findViewById(R.id.exit);
 
         //ImageButton b=findViewById(R.id.menu);
         //b.setOnClickListener(this::showPopup);
@@ -87,6 +89,8 @@ public class webview extends AppCompatActivity implements NavigationView.OnNavig
         cart.setOnClickListener(v -> contact());
         shop.setOnClickListener(v -> shop());
         home.setOnClickListener(v -> home());
+        exit.setOnClickListener(v -> exit());
+
 
 
 
