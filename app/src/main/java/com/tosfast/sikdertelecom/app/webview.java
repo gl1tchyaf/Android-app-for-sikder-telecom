@@ -49,12 +49,11 @@ public class webview extends AppCompatActivity implements NavigationView.OnNavig
     private WebView webView;
     private AlertDialog.Builder dialogeBuilder;
     private AlertDialog myDialog;
-    private AlertDialog myDialog3;
-    public static String catagoryLink = "link";
     ArrayList<catagoryArrayList> arrayList;
     catagoryAdapter catagoryAdapter;
     private ListView catagoryListView;
     TextView exit;
+    private String catagorylink;
 
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -108,6 +107,9 @@ public class webview extends AppCompatActivity implements NavigationView.OnNavig
         });
 
         fetchCatagory();
+
+        catagorylink = "https://sikdertelecom.com/";
+        catagory();
 
     }
 
@@ -180,8 +182,12 @@ public class webview extends AppCompatActivity implements NavigationView.OnNavig
     }
 
     void catagory(){
-        Intent i = new Intent(this, catagoryPage.class);
-        startActivity(i);
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            catagorylink = extras.getString("catagoryLink");
+        }
+
+        webView.loadUrl(catagorylink);
     }
 
     public void loadDatainList(){
@@ -207,13 +213,11 @@ public class webview extends AppCompatActivity implements NavigationView.OnNavig
     }
 
     void contact(){
-        Intent intent= new Intent(this, cart.class);
-        startActivity(intent);
+        webView.loadUrl("https://sikdertelecom.com/cart");
     }
 
     void shop(){
-        Intent intent= new Intent(this, shop.class);
-        startActivity(intent);
+        webView.loadUrl("https://sikdertelecom.com/shop");
     }
 
     void home(){

@@ -58,7 +58,7 @@ public class catagoryAdapter extends BaseAdapter {
         rowView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(context, catagoryPage.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                Intent i = new Intent(context, webview.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 i.putExtra("catagoryLink", catagoryArrayList.getLink());
                 context.startActivity(i);
             }

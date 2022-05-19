@@ -13,15 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <uses-library android:name="org.apache.http.legacy" android:required="false"/>
-        <activity
-            android:name=".catagoryPage"
-            android:exported="true" />
-        <activity
-            android:name=".shop"
-            android:exported="true" />
-        <activity
-            android:name=".cart"
-            android:exported="true" />
+
         <activity
             android:name=".webview"
             android:exported="true" />
