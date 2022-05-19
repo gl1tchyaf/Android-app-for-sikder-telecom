@@ -38,6 +38,15 @@
                 android:orientation="vertical">
 
                 <include layout="@layout/nav_header_nav_draw" />
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="40dp"
+                    android:layout_gravity="left"
+                    android:text="CATEGORY"
+                    android:textStyle="bold|italic"
+                    android:layout_marginStart="40dp"/>
 
                 <ListView
                     android:id="@+id/list_slidermenu"
@@ -45,6 +54,16 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     />
+                <TextView
+                    android:id="@+id/exit"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_gravity="left"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:text="Exit"
+                    android:layout_marginStart="10dp"/>
 
             </LinearLayout>
         </com.google.android.material.navigation.NavigationView>

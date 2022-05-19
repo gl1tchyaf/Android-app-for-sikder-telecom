@@ -91,10 +91,7 @@ public class shop extends AppCompatActivity implements NavigationView.OnNavigati
     public boolean onNavigationItemSelected(MenuItem item) {
 
 
-        if(item.getItemId()==R.id.exit){
-            exit();
-            return true;
-        }
+
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

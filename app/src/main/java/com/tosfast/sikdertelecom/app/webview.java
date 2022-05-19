@@ -131,8 +131,6 @@ public class webview extends AppCompatActivity implements NavigationView.OnNavig
                         String catagory = jo.getString("name");
                         catagoryArrayList catagoryArrayList = new catagoryArrayList(catagory ,"https://sikdertelecom.com/category/"+catagory);
                         arrayList.add(catagoryArrayList);
-                        System.out.println(catagoryArrayList.getName());
-                        System.out.println(catagoryArrayList.getLink());
                         loadDatainList();
 
                     }
@@ -170,10 +168,6 @@ public class webview extends AppCompatActivity implements NavigationView.OnNavig
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
 
-        if(item.getItemId()==R.id.exit){
-            exit();
-            return true;
-        }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

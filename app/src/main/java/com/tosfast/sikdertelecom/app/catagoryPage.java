@@ -103,10 +103,7 @@ public class catagoryPage extends AppCompatActivity implements NavigationView.On
 
 
 
-        if(item.getItemId()==R.id.exit){
-            exit();
-            return true;
-        }
+
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

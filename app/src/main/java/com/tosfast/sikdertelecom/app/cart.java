@@ -92,10 +92,7 @@ public class cart extends AppCompatActivity implements NavigationView.OnNavigati
 
 
 
-        if(item.getItemId()==R.id.exit){
-            exit();
-            return true;
-        }
+
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
