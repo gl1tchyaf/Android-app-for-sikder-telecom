@@ -37,6 +37,7 @@ public class catagoryPage extends AppCompatActivity implements NavigationView.On
     private AlertDialog.Builder dialogeBuilder;
     private AlertDialog myDialog;
     private AlertDialog myDialog3;
+    private String link;
 
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -54,8 +55,12 @@ public class catagoryPage extends AppCompatActivity implements NavigationView.On
             }
         });
 
-        webview wb = new webview();
-        webView.loadUrl(wb.catagoryLink);
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            link = extras.getString("catagoryLink");
+        }
+
+        webView.loadUrl(link);
 
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);

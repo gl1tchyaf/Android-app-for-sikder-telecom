@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -57,7 +58,9 @@ public class catagoryAdapter extends BaseAdapter {
         rowView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(context, catagoryPage.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                i.putExtra("catagoryLink", catagoryArrayList.getLink());
+                context.startActivity(i);
             }
         });
 
