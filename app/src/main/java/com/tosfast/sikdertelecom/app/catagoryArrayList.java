@@ -1,7 +1,7 @@
 package com.tosfast.sikdertelecom.app;
 
 public class catagoryArrayList {
-    String name,link;
+    String name, link;
 
     public catagoryArrayList(String name, String link) {
         this.name = name;

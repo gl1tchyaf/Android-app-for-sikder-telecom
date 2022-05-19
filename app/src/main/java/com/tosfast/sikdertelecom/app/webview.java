@@ -42,6 +42,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
 
 public class webview extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private WebView webView;
@@ -49,6 +50,7 @@ public class webview extends AppCompatActivity implements NavigationView.OnNavig
     private AlertDialog myDialog;
     private AlertDialog myDialog3;
     public static String catagoryLink = "link";
+    ArrayList<catagoryArrayList> arrayList;
 
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -57,6 +59,7 @@ public class webview extends AppCompatActivity implements NavigationView.OnNavig
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_webview);
+        arrayList = new ArrayList<>();
 
         webView= findViewById(R.id.webview);
         webView.setWebViewClient(new WebViewClient(){
@@ -122,7 +125,10 @@ public class webview extends AppCompatActivity implements NavigationView.OnNavig
                         jo=ja.getJSONObject(i);
 
                         String catagory = jo.getString("name");
-                        System.out.println(catagory);
+                        catagoryArrayList catagoryArrayList = new catagoryArrayList(catagory ,"https://sikdertelecom.com/category/"+catagory);
+                        arrayList.add(catagoryArrayList);
+                        System.out.println(catagoryArrayList.getName());
+                        System.out.println(catagoryArrayList.getLink());
 
                     }
                 } catch (Exception e) {
