@@ -2,20 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="5dp"
-    android:layout_gravity="center">
+    android:layout_gravity="center"
+    android:background="@drawable/layout_bg">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:textSize="17dp"
-        android:fontFamily="@font/roboto"
+        android:textSize="16dp"
+        android:fontFamily="@font/eligated"
         android:text="Do you really want to exit?"
-        android:textColor="#192841"
+        android:textColor="@color/white"
         android:gravity="center_horizontal" />
 
     <LinearLayout
@@ -34,8 +34,8 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/custombutton"
-            android:fontFamily="@font/roboto"
-            android:textColor="#192841"
+            android:fontFamily="@font/eligated"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textAllCaps="false"/>
 
@@ -48,8 +48,8 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/custombutton"
-            android:fontFamily="@font/roboto"
-            android:textColor="#192841"
+            android:fontFamily="@font/eligated"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textAllCaps="false"/>
     </LinearLayout>
