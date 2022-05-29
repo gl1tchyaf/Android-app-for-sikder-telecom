@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/FireTest.iml" filepath="$PROJECT_DIR$/.idea/modules/FireTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/FireTest.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/FireTest.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/FireTest.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/FireTest.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/FireTest.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/FireTest.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/FireTest.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/FireTest.app.unitTest.iml" />
     </modules>
   </component>
 </project>
