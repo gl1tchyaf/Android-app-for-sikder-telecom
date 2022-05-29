@@ -101,23 +101,23 @@
 
         <ImageButton
             android:id="@+id/Shop"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40sp"
+            android:layout_height="50sp"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:background="@null"
-            app:srcCompat="@drawable/shop"
+            app:srcCompat="@drawable/shop2"
             tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
 
         <ImageButton
             android:id="@+id/menu"
-            android:layout_width="wrap_content"
+            android:layout_width="10sp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:background="@null"
-            app:srcCompat="@drawable/option"
+            app:srcCompat="@drawable/menu2"
             tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
 
