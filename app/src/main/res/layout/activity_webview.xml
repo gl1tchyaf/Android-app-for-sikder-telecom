@@ -30,23 +30,25 @@
             android:layout_height="match_parent"
             android:layout_gravity="right"
             android:fitsSystemWindows="true"
-            app:headerLayout="@layout/nav_header_nav_draw"
-            app:menu="@menu/dropdown_menu" >
+            app:menu="@menu/dropdown_menu"
+            android:background="#008584">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginTop="30sp">
 
                 <include layout="@layout/nav_header_nav_draw" />
                 <TextView
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="40dp"
+                    android:layout_marginTop="10sp"
                     android:layout_gravity="left"
                     android:text="CATEGORY"
-                    android:textStyle="bold|italic"
-                    android:layout_marginStart="40dp"/>
+                    android:fontFamily="@font/helloavocado"
+                    android:layout_marginStart="20dp"/>
 
                 <ListView
                     android:id="@+id/list_slidermenu"
@@ -54,16 +56,19 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     />
+
                 <TextView
                     android:id="@+id/exit"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:layout_gravity="left"
                     android:textSize="20dp"
                     android:textStyle="bold"
+                    android:fontFamily="@font/roboto"
                     android:text="Exit"
-                    android:layout_marginStart="10dp"/>
+                    android:layout_marginTop="20sp"
+                    android:layout_marginStart="45sp"/>
 
             </LinearLayout>
         </com.google.android.material.navigation.NavigationView>

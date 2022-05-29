@@ -9,13 +9,24 @@
     android:layout_margin="20dp"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/product"
+        app:layout_constraintBottom_toBottomOf="@+id/catagoryShow"
+        app:layout_constraintEnd_toStartOf="@+id/catagoryShow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/catagoryShow" />
+
     <TextView android:id="@+id/catagoryShow"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Catagory"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:layout_marginStart="40sp"
+        android:fontFamily="@font/eligated"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
