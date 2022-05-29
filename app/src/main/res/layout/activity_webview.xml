@@ -91,12 +91,12 @@
 
         <ImageButton
             android:id="@+id/Contact"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40sp"
+            android:layout_height="50sp"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:background="@null"
-            app:srcCompat="@drawable/cart"
+            app:srcCompat="@drawable/cart2"
             tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
         <ImageButton
